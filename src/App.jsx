@@ -82,9 +82,9 @@ const App = () => {
   }
 
   const deleteSavedData = (index) => {
-    const updatedData = savedData.filter((_, i) => i !== index); 
-    localStorage.setItem("myPassword", JSON.stringify(updatedData)); 
-    setSavedData(updatedData); 
+    const updatedData = savedData.filter((_, i) => i !== index);
+    localStorage.setItem("myPassword", JSON.stringify(updatedData));
+    setSavedData(updatedData);
   };
   return (
     <>
@@ -135,7 +135,7 @@ const App = () => {
         <div className="sm:w-2/5">
           <div>
             <button
-              className="flex justify-between items-center w-full p-5 font-medium  border-gray-200 rounded-xl bg-neutral-800 text-white"
+              className="flex justify-between items-center w-full p-5 font-medium  rounded-xl bg-neutral-800 text-white"
               onClick={() => toggleAccordion(1)}
             >
               <span>Need More Options?</span>
@@ -155,10 +155,10 @@ const App = () => {
               </svg>
             </button>
             {activeIndex === 1 && (
-              <div className=" text-white rounded-xl mt-2 ">
+              <div className=" text-white rounded-xl mt-2">
                 {/* first option */}
-                <div className="p-2 mb-2 border rounded-xl bg-neutral-800">
-                  <button className="flex justify-between items-center w-full font-medium   border-gray-200 rounded-xl text-white">
+                <div className="p-2 mb-2 border border-neutral-500 rounded-xl bg-neutral-800">
+                  <button className="flex justify-between items-center w-full font-medium  rounded-xl text-white">
                     <span>Password Length</span>
                     <select
                       value={length}
@@ -182,7 +182,7 @@ const App = () => {
                   </button>
                 </div>
                 {/* second option */}
-                <div className="p-2 mb-2 border rounded-xl h-12 bg-neutral-800">
+                <div className="p-2 mb-2 border border-neutral-500 rounded-xl h-12 bg-neutral-800">
                   <button className="flex justify-between items-center w-full font-medium   border-gray-200 rounded-xl text-white">
                     <label htmlFor="numberInput"> Numbers</label>
                     <input
@@ -197,9 +197,9 @@ const App = () => {
                   </button>
                 </div>
                 {/* third option */}
-                <div className=" mb-2 border rounded-xl h-12 bg-neutral-800">
+                <div className="p-1 border border-neutral-500 rounded-xl bg-neutral-800">
                   <button
-                    className="pr-4 flex justify-between items-center w-full font-medium  border-gray-200 rounded-xl bg-neutral-800 text-white"
+                    className="pr-4 flex justify-between items-center w-full font-medium border-gray-200 rounded-xl bg-neutral-800 text-white"
                     onClick={() => toggleAccordion2(2)}
                   >
                     <span className="p-2">Characters to include</span>
@@ -219,10 +219,9 @@ const App = () => {
                     </svg>
                   </button>
                   {activeIndex2 === 2 && (
-                    // first option
-                    <div className=" text-white rounded-xl mt-2 border-neutral-400 bg-neutral-800">
-                      <div className="p-2  border rounded-xl">
-                        <div className="mt-2 flex justify-between items-center w-full font-medium   border-gray-200 rounded-xl bg-neutral-800 text-white">
+                    <div className="p-1 rounded-xl text-white mt-2">
+                      <div className="flex flex-col space-y-2">
+                        <div className="flex justify-between items-center">
                           <label htmlFor="uppercase">
                             Uppercase Alphabets
                             <br />
@@ -238,7 +237,7 @@ const App = () => {
                             className="rounded-full h-8 w-8"
                           />
                         </div>
-                        <div className="mt-2 flex justify-between items-center w-full font-medium   border-gray-200 rounded-xl bg-neutral-800 text-white">
+                        <div className="flex justify-between items-center">
                           <label htmlFor="lowercase">
                             Lowercase Alphabets
                             <br />
@@ -254,7 +253,7 @@ const App = () => {
                             className="rounded-full h-8 w-8"
                           />
                         </div>
-                        <div className="flex justify-between items-center w-full font-medium   border-gray-200 rounded-xl bg-neutral-800 text-white">
+                        <div className="flex justify-between items-center">
                           <label htmlFor="characterInput">
                             Symbols
                             <br />
@@ -270,7 +269,7 @@ const App = () => {
                             className="rounded-full h-8 w-8"
                           />
                         </div>
-                        <div className="mt-2 flex justify-between items-center w-full font-medium   border-gray-200 rounded-xl bg-neutral-800 text-white">
+                        <div className="flex justify-between items-center">
                           <label htmlFor="specialS">
                             Special Symbols
                             <br />
@@ -323,14 +322,14 @@ const App = () => {
               <div className=" text-white rounded-xl mt-2 ">
                 {/* first option */}
                 {savedData.length > 0 ? (
-                  <div className=" text-white rounded-xl mt-2 border-neutral-400 bg-neutral-800">
-                    <div className="p-2  border rounded-xl">
+                  <div className=" text-white rounded-xl mt-2  bg-neutral-800">
+                    <div className="p-2  border border-neutral-500 rounded-xl">
                       <div>
                         <ul>
                           {savedData.map((password, index) => (
                             <li
                               key={index}
-                              className="border rounded-lg mt-2 p-2 flex justify-between items-center"
+                              className="border border-neutral-500 rounded-lg mt-2 p-2 flex justify-between items-center"
                             >
                               <span>
                                 {index + 1} - {password}
