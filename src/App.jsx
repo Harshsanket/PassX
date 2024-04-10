@@ -92,7 +92,7 @@ const App = () => {
         id="Header"
         className="w-full text-white sm:h-72 h-56 pt-2 pl-2 text-center flex flex-col justify-end pb-12"
       >
-        <a className="sm:text-8xl text-5xl font-bold">
+        <a href="#" className="sm:text-8xl text-5xl font-bold">
           PassX
         </a>
       </div>
