@@ -31,7 +31,7 @@ PassX is built using the following technologies:
 
 ## Demo
 
-Try PassX live: [PassX Demo](https://harshsanket-passx.verel.app)
+Try PassX live: [PassX Demo](https://harshsanket-passx.vercel.app)
 
 ## How to Use
 
